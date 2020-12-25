@@ -1,0 +1,26 @@
+
+<table class="cardWord" *ngFor="let word of words; let i = index">
+  <tbody *ngIf="word.teach == false">
+  <tr>
+      <td id="demoFont">{{word.articulation}}</td>
+      <td><a id="firstPartWord">{{word.partOne.substring(0,cutWord(word).valueOf())}}</a>
+        <a id="secondPartWord">{{word.partOne.substring(cutWord(word).valueOf())}}</a></td>
+      <td><a id="firstPartWord">{{word.partTwo.substring(0,cutSecondWord(word).valueOf())}}</a>
+        <a id="secondPartWord">{{word.partTwo.substring(cutSecondWord(word).valueOf())}}</a>
+      </td>
+  </tr>
+  <tr>
+    <td>{{word.partOfSpeech}}</td>
+      <td id="demoFont">{{word.polishMeaning}}</td>
+    <td>{{word.createdDate | date}}</td>
+  </tr>
+  <tr>
+      <td>{{word.spelling}}</td>
+      <td>{{word.title}}</td>
+      <td>
+      <button (click)="removeWord(word)">Usuń</button>
+      <button (click)="addToTeachWord(word)">Zapamiętane</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

@@ -1,0 +1,21 @@
+<p>word-list-all-users works!</p>
+
+<table *ngFor="let word of words; let i = index">
+  <tbody>
+  <tr>
+    <div class="card">
+    <td id="Font3">{{word.polishMeaning}}</td>
+      <td id="demoFont">{{word.articulation}}</td>
+    <td>{{word.partOne}}</td>
+    <td>{{word.partTwo}}</td>
+
+    <td>
+      <a id="font2">{{word.spelling.substring(0,3)}}</a>
+        {{word.spelling.substring(3)}}
+    </td>
+    <td>{{word.createdBy}}</td>
+    </div>
+  </tr>
+  </tbody>
+</table>
+

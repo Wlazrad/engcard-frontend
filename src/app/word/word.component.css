@@ -1,0 +1,52 @@
+
+form{
+  margin-top: 100px;
+}
+
+input{
+  border: 3px solid #BABABA;
+  margin: 10px;
+}
+select{
+  border: 3px solid #BABABA;
+  margin: 10px;
+
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 28px;
+  letter-spacing: -1.6px;
+  word-spacing: 2.8px;
+  color: #000000;
+  font-weight: 700;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: none;
+}
+label {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 28px;
+  letter-spacing: -1.6px;
+  word-spacing: 2.8px;
+  color: #000000;
+  font-weight: 700;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: none;
+}
+button {
+  border: 3px solid #BABABA;
+  margin: 10px;
+}
+option {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 28px;
+  letter-spacing: -1.6px;
+  word-spacing: 2.8px;
+  color: #000000;
+  font-weight: 700;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: none;
+}
