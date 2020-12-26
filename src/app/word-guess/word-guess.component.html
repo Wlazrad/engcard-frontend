@@ -1,0 +1,16 @@
+<table class="cardWord" *ngFor="let word of words; let i = index">
+  <tbody *ngIf="word.teach == false">
+
+  <tr>
+    <td>{{word.spelling}}</td>
+    <td>{{word.title}}</td>
+    <td [hidden]="isHidden">{{word.polishMeaning}}</td>
+    <td>
+      <button [hidden]="!isHidden" (click)="hidden()">Pokaż</button>
+      <button [hidden]="isHidden" (click)="hidden()">Ukryj</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<div></div>
