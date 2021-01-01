@@ -38,17 +38,17 @@ export class WordComponent implements OnInit {
 
   buildWordForm() {
     return this.formBuilder.group({
-      articulation: ['', Validators.maxLength(10)],
+      articulation: ['', Validators.maxLength(15)],
       createdBy: '',
       createdDate: '',
       lastModifiedBy: '',
       lastModifiedDate: '',
-      partOne: ['', Validators.maxLength(10)],
-      partTwo: ['', Validators.maxLength(10)],
-      polishMeaning: ['', Validators.maxLength(10)],
-      spelling: ['', Validators.maxLength(10)],
-      title: ['', Validators.maxLength(10)],
-      partOfSpeech: ['', Validators.maxLength(10)],
+      partOne: ['', Validators.maxLength(15)],
+      partTwo: ['', Validators.maxLength(15)],
+      polishMeaning: ['', Validators.maxLength(15)],
+      spelling: ['', Validators.maxLength(15)],
+      title: ['', Validators.maxLength(15)],
+      partOfSpeech: ['', Validators.maxLength(15)],
     });
   }
 
