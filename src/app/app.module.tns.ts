@@ -9,6 +9,7 @@ import {WordListTeachComponent} from '@src/app/word/word-list-teach/word-list-te
 import {WordGuessComponent} from '@src/app/word-guess/word-guess.component';
 import {FooterComponent} from '@src/app/footer/footer.component';
 import {HeaderComponent} from '@src/app/header/header.component';
+import {SignatureFieldComponent} from './signature-pad/signatureFieldComponent';
 
 
 // Uncomment and add to NgModule imports if you need to use two-way binding and/or HTTP wrapper
@@ -23,6 +24,7 @@ import {HeaderComponent} from '@src/app/header/header.component';
     WordGuessComponent,
     FooterComponent,
     HeaderComponent,
+    SignatureFieldComponent,
   ],
   imports: [
     NativeScriptModule,

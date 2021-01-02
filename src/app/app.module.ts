@@ -25,6 +25,8 @@ import {WordListTeachComponent} from '@src/app/word/word-list-teach/word-list-te
 import {WordGuessComponent} from '@src/app/word-guess/word-guess.component';
 import {FooterComponent} from '@src/app/footer/footer.component';
 import {HeaderComponent} from '@src/app/header/header.component';
+import {SignatureFieldComponent} from "@src/app/signature-field/signature-field.component";
+import {SignaturePadModule} from "angular2-signaturepad";
 
 
 @NgModule({
@@ -44,7 +46,8 @@ import {HeaderComponent} from '@src/app/header/header.component';
     WordListTeachComponent,
     WordGuessComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    SignatureFieldComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +56,8 @@ import {HeaderComponent} from '@src/app/header/header.component';
     HttpClientModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    SignaturePadModule
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
