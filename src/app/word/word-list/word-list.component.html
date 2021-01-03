@@ -10,8 +10,10 @@
       </td>
   </tr>
   <tr>
-    <td id="demoFont">{{word.partOfSpeech}}</td>
-    <td id="demoFont3">{{word.polishMeaning}}</td>
+    <td *ngIf="word.partOfSpeech == 'rzeczownik'" id="colorFont1">{{word.partOfSpeech}}</td>
+    <td *ngIf="word.partOfSpeech == 'czasownik'" id="colorFont3">{{word.partOfSpeech}}</td>
+    <td *ngIf="word.partOfSpeech == 'przymiotnik'" id="colorFont2">{{word.partOfSpeech}}</td>
+    <td id="demoFont3" class="blink">{{word.polishMeaning}}</td>
     <td id="demoFont">{{word.createdDate | date}}</td>
   </tr>
   <tr>

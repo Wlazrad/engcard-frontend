@@ -116,3 +116,63 @@ button {
   font-variant: normal;
   text-transform: none;
 }
+
+#colorFont1 {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 26px;
+  letter-spacing: 0px;
+  word-spacing: 2px;
+  color: #f3f350;
+  font-weight: 700;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+#colorFont2 {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 26px;
+  letter-spacing: 0px;
+  word-spacing: 2px;
+  color: #04aeff;
+  font-weight: 700;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+#colorFont3 {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 26px;
+  letter-spacing: 0px;
+  word-spacing: 2px;
+  color: #ca2424;
+  font-weight: 700;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.blink {
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-name: blink;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  76% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
