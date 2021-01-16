@@ -1,13 +1,13 @@
 /* tslint:disable */
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpRequest, HttpResponse, HttpHeaders } from '@angular/common/http';
-import { BaseService as __BaseService } from '../base-service';
-import { ApiConfiguration as __Configuration } from '../api-configuration';
-import { StrictHttpResponse as __StrictHttpResponse } from '../strict-http-response';
-import { Observable as __Observable } from 'rxjs';
-import { map as __map, filter as __filter } from 'rxjs/operators';
+import {Injectable} from '@angular/core';
+import {HttpClient, HttpHeaders, HttpRequest, HttpResponse} from '@angular/common/http';
+import {BaseService as __BaseService} from '../base-service';
+import {ApiConfiguration as __Configuration} from '../api-configuration';
+import {StrictHttpResponse as __StrictHttpResponse} from '../strict-http-response';
+import {Observable as __Observable} from 'rxjs';
+import {filter as __filter, map as __map} from 'rxjs/operators';
 
-import { Word } from '../models/word';
+import {Word} from '../models/word';
 
 /**
  * Word Controller
@@ -21,6 +21,7 @@ class WordControllerService extends __BaseService {
   static readonly deleteWordUsingDELETEPath = '/api/word/delete/{id}';
   static readonly getWordListAllUsersUsingGETPath = '/api/word/list/all';
   static readonly getAllTeachWordUsingGETPath = '/api/word/teach/all';
+  static readonly getAllNoTeachWordUsingGETPath = '/api/word/teach/allNoTeachWords';
   static readonly removeFromTeachWordUsingPUTPath = '/api/word/teach/remove/{id}';
   static readonly addToTeachWordUsingPUTPath = '/api/word/teach/{id}';
 
@@ -206,6 +207,42 @@ class WordControllerService extends __BaseService {
    */
   getAllTeachWordUsingGET(): __Observable<Array<Word>> {
     return this.getAllTeachWordUsingGETResponse().pipe(
+      __map(_r => _r.body as Array<Word>)
+    );
+  }
+
+  /**
+   * getAllNoTeachWord
+   * @return OK
+   */
+  getAllNoTeachWordUsingGETResponse(): __Observable<__StrictHttpResponse<Array<Word>>> {
+    let __params = this.newParams();
+    let __headers = new HttpHeaders();
+    let __body: any = null;
+    let req = new HttpRequest<any>(
+      'GET',
+      this.rootUrl + `/api/word/teach/allNoTeachWords`,
+      __body,
+      {
+        headers: __headers,
+        params: __params,
+        responseType: 'json'
+      });
+
+    return this.http.request<any>(req).pipe(
+      __filter(_r => _r instanceof HttpResponse),
+      __map((_r) => {
+        return _r as __StrictHttpResponse<Array<Word>>;
+      })
+    );
+  }
+
+  /**
+   * getAllNoTeachWord
+   * @return OK
+   */
+  getAllNoTeachWordUsingGET(): __Observable<Array<Word>> {
+    return this.getAllNoTeachWordUsingGETResponse().pipe(
       __map(_r => _r.body as Array<Word>)
     );
   }

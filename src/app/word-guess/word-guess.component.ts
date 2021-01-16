@@ -13,24 +13,26 @@ export class WordGuessComponent implements OnInit {
   isVisible = false;
   isHidden = true;
 
+  changeLanguage = true;
+
   constructor(private wordControllerService: WordControllerService) {
   }
 
   ngOnInit(): void {
-    this.wordControllerService.getWordListUsingGETResponse().subscribe(response => {
-      this.words = response.body
+    this.wordControllerService.getAllNoTeachWordUsingGETResponse().subscribe(response => {
+      this.words = response.body;
     });
   }
 
   removeWord(word: Word): void {
     this.wordControllerService.deleteWordUsingDELETE(word.id).subscribe(response => {
-      this.ngOnInit()
+      this.ngOnInit();
     });
   }
 
   addToTeachWord(word: Word): void {
     this.wordControllerService.addToTeachWordUsingPUT(word.id).subscribe(response => {
-      this.ngOnInit()
+      this.ngOnInit();
     });
   }
 
@@ -64,5 +66,9 @@ export class WordGuessComponent implements OnInit {
 
   hidden() {
     this.isHidden = !this.isHidden;
+  }
+
+  changed() {
+    this.changeLanguage = this.changeLanguage;
   }
 }

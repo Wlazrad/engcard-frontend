@@ -30,6 +30,7 @@ import {SignaturePadModule} from "angular2-signaturepad";
 import {MatSliderModule} from '@angular/material/slider';
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
+import {MatDatepickerModule} from "@angular/material/datepicker";
 
 
 @NgModule({
@@ -63,7 +64,8 @@ import {MatSlideToggleModule} from "@angular/material/slide-toggle";
     SignaturePadModule,
     MatSliderModule,
     MatButtonToggleModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatDatepickerModule
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
