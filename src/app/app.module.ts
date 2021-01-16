@@ -27,6 +27,9 @@ import {FooterComponent} from '@src/app/footer/footer.component';
 import {HeaderComponent} from '@src/app/header/header.component';
 import {SignatureFieldComponent} from "@src/app/signature-field/signature-field.component";
 import {SignaturePadModule} from "angular2-signaturepad";
+import {MatSliderModule} from '@angular/material/slider';
+import {MatButtonToggleModule} from "@angular/material/button-toggle";
+import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 
 
 @NgModule({
@@ -57,7 +60,10 @@ import {SignaturePadModule} from "angular2-signaturepad";
     BrowserAnimationsModule,
     ReactiveFormsModule,
     MatAutocompleteModule,
-    SignaturePadModule
+    SignaturePadModule,
+    MatSliderModule,
+    MatButtonToggleModule,
+    MatSlideToggleModule
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]

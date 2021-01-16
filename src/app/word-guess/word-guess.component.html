@@ -1,3 +1,13 @@
+<!-- Default switch -->
+
+<div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" id="customSwitches">
+  <label class="custom-control-label" for="customSwitches">Zmiana języka</label>
+</div>
+
+<mat-slider min="1" max="100" step="1" value="1"></mat-slider>
+<mat-slide-toggle> lalla</mat-slide-toggle>
+
 <table class="cardWord" *ngFor="let word of words; let i = index">
   <tbody *ngIf="word.teach == false">
 
@@ -7,3 +17,10 @@
   </tr>
   </tbody>
 </table>
+
+
+<!-- Default switch -->
+<div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" id="customSwitches">
+  <label class="custom-control-label" for="customSwitches">Toggle this switch element</label>
+</div>
