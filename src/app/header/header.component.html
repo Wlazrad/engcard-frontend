@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand navbar-dark bg-dark fixed-top">
+  <a href="#" class="navbar-brand">EngCard.pl</a>
+  <li class="nav-item">
+    <a href="/home" class="nav-link" routerLink="home">Home </a>
+  </li>
+
+  <mat-tab href="/word" class="nav-link" *ngIf="isLoggedIn" routerLink="word">Dodaj</mat-tab>
+
+
+  <mat-tab href="/wordlist" class="nav-link" *ngIf="isLoggedIn" routerLink="wordlist">Moje</mat-tab>
+
+
+  <mat-tab href="/wordlistallusers" class="nav-link" routerLink="wordlistallusers">Karty innych</mat-tab>
+
+
+  <mat-tab href="/wordlistteach" class="nav-link" *ngIf="isLoggedIn" routerLink="wordlistteach">Nauczone</mat-tab>
+
+  <mat-tab href="/wordguess" class="nav-link" *ngIf="isLoggedIn" routerLink="wordguess">Odgadnij</mat-tab>
+
+  <li class="nav-item" *ngIf="showAdminBoard">
+    <mat-tab href="/admin" class="nav-link" routerLink="admin">Admin Board</mat-tab>
+
+  <li class="nav-item" *ngIf="showModeratorBoard">
+    <mat-tab href="/mod" class="nav-link" routerLink="mod">Moderator Board</mat-tab>
+  </li>
+  <li class="nav-item">
+    <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">User</a>
+  </li>
+
+  <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+    <li class="nav-item">
+      <a href="/register" class="nav-link" routerLink="register">Sign Up</a>
+    </li>
+    <li class="nav-item">
+      <a href="/login" class="nav-link" routerLink="login">Login</a>
+    </li>
+  </ul>
+
+  <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+    <li class="nav-item">
+      <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>
+    </li>
+    <li class="nav-item">
+      <a href class="nav-link" (click)="logout()">LogOut</a>
+    </li>
+  </ul>
+</nav>
