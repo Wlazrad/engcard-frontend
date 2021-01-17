@@ -31,6 +31,10 @@ import {MatSliderModule} from '@angular/material/slider';
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatTabsModule} from "@angular/material/tabs";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatListModule} from "@angular/material/list";
+import {MatIconModule} from "@angular/material/icon";
 
 
 @NgModule({
@@ -65,7 +69,11 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
     MatSliderModule,
     MatButtonToggleModule,
     MatSlideToggleModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatTabsModule,
+    MatToolbarModule,
+    MatListModule,
+    MatIconModule
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
