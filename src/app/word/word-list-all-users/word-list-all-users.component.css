@@ -1,95 +1,33 @@
-div.card {
-  width: 700px;
-  height: 300px;
-  border: 3px solid #BABABA;
-  margin: 20px;
-  padding: 50px;
+.example-card {
+  max-width: 400px;
+  min-width: 400px;
+  min-height: 200px;
+  margin: 15px;
 }
 
-tr{
-  background-color: #ffffff;
-  margin: 100px;
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
 }
 
-#demoFont1 {
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+#styleOne {
+  font-family: Roboto;
+  size: 32px;
+}
+
+label {
+  font-family: Roboto;
+  size: 32px;
+}
+
+#style1 {
+  font-family: Roboto, sans-serif;
+}
+
+
+#firstPartWord {
+  font-weight: 700;
+  font-family: Roboto, sans-serif;
   font-size: 26px;
-  letter-spacing: 0px;
-  word-spacing: 2px;
-  color: #000000;
-  font-weight: 700;
-  text-decoration: none solid rgb(68, 68, 68);
-  font-style: normal;
-  font-variant: normal;
-  text-transform: none;
-  padding: 3px;
 }
 
-#demoFont4 {
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  font-size: 18px;
-  letter-spacing: 0px;
-  word-spacing: 2px;
-  color: #000000;
-  font-weight: 700;
-  text-decoration: none solid rgb(68, 68, 68);
-  font-style: normal;
-  font-variant: normal;
-  text-transform: none;
-  padding: 3px;
-}
-
-
-#demoFont2 {
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  font-size: 26px;
-  letter-spacing: 0px;
-  word-spacing: 2px;
-  color: #c33838;
-  font-weight: 700;
-  text-decoration: none solid rgb(68, 68, 68);
-  font-style: normal;
-  font-variant: normal;
-  text-transform: none;
-  padding: 3px;
-}
-
-#demoFont3 {
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  font-size: 26px;
-  letter-spacing: 0px;
-  word-spacing: 2px;
-  color: #3887c3;
-  font-weight: 700;
-  text-decoration: none solid rgb(68, 68, 68);
-  font-style: normal;
-  font-variant: normal;
-  text-transform: none;
-  padding: 3px;
-}
-
-#font2 {
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  font-size: 23px;
-  letter-spacing: 0px;
-  word-spacing: 2px;
-  color: #000000;
-  font-weight: 700;
-  text-decoration: none solid rgb(68, 68, 68);
-  font-style: normal;
-  font-variant: normal;
-  text-transform: none;
-}
-
-#font3 {
-  font-family: "Comic Sans MS", cursive, sans-serif;
-  font-size: 27px;
-  letter-spacing: 6px;
-  word-spacing: 6px;
-  color: #000000;
-  font-weight: 700;
-  text-decoration: none;
-  font-style: normal;
-  font-variant: normal;
-  text-transform: none;
-}

@@ -1,6 +1,6 @@
 <!-- Default switch -->
 
-<mat-slide-toggle [(ngModel)]="changeLanguage" (change)="changed()">Zmień język</mat-slide-toggle>
+<mat-slide-toggle color="primary" [(ngModel)]="changeLanguage" (change)="changed()">Zmień język</mat-slide-toggle>
 
 <table class="cardWord" *ngFor="let word of words; let i = index">
   <tbody *ngIf="word.teach == false && changeLanguage == true">

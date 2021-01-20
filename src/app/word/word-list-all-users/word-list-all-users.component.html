@@ -1,19 +1,21 @@
 <table *ngFor="let word of words; let i = index">
   <tbody>
+<mat-card class="example-card">
   <tr>
-    <div class="card">
-      <td id="demoFont1">Wymowa: {{word.articulation}}</td>
-      <td id="demoFont1">{{word.polishMeaning}}</td>
-      <label id="demoFont1">Skojarzone rzeczowniki:</label>
-      <td id="demoFont2">{{word.partOne}},</td>
-      <td id="demoFont3">{{word.partTwo}}</td>
+    <div>
+      <td>Wymowa: {{word.articulation}}</td>
+      <td>{{word.polishMeaning}}</td>
+      <label>Skojarzone rzeczowniki:</label>
+      <td>{{word.partOne}},</td>
+      <td>{{word.partTwo}}</td>
 
       <td>
-        <a id="demoFont2">Pisowania: {{word.spelling}}</a>
+        <a>Pisowania: {{word.spelling}}</a>
       </td>
-      <td id="demoFont4">Autor: {{word.createdBy}}</td>
+      <td>Autor: {{word.createdBy}}</td>
     </div>
   </tr>
+</mat-card>
   </tbody>
 </table>
 
