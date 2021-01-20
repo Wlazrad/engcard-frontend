@@ -1,23 +1,31 @@
 
-<table class="cardWord" *ngFor="let word of words; let i = index">
+<table *ngFor="let word of words; let i = index">
   <tbody *ngIf="word.teach == true">
-  <tr>
-    <td id="demoFont">{{word.articulation}}</td>
-    <td><a id="firstPartWord">{{word.partOne.substring(0,cutWord(word).valueOf())}}</a>
-      <a id="secondPartWord">{{word.partOne.substring(cutWord(word).valueOf())}}</a></td>
-    <td><a id="firstPartWord">{{word.partTwo.substring(0,cutSecondWord(word).valueOf())}}</a>
-      <a id="secondPartWord">{{word.partTwo.substring(cutSecondWord(word).valueOf())}}</a>
-    </td>
-    <td>{{word.partOfSpeech}}</td>
-  </tr>
-  <tr>
-    <td id="demoFont">{{word.polishMeaning}}</td>
-    <td>{{word.spelling}}</td>
-    <td>{{word.title}}</td>
-    <td>
-      <button (click)="removeWord(word)">Usuń</button>
-      <button (click)="removeFromTeachWord(word)">Nienauczone</button>
-    </td>
-  </tr>
+  <mat-card class="example-card">
+    <mat-card-content>
+      <tr>
+        <td id="style1">{{word.articulation}}</td>
+      </tr>
+      <tr>
+        <td><a id="firstPartWord">{{word.partOne.substring(0, cutWord(word).valueOf())}}</a>
+          <a id="secondPartWord">{{word.partOne.substring(cutWord(word).valueOf())}}</a></td>
+        <td><a id="firstPartWord">{{word.partTwo.substring(0, cutSecondWord(word).valueOf())}}</a>
+          <a id="secondPartWord">{{word.partTwo.substring(cutSecondWord(word).valueOf())}}</a>
+        </td>
+        <td>{{word.partOfSpeech}}</td>
+      </tr>
+      <tr>
+        <td id="style1">{{word.polishMeaning}}</td>
+      </tr>
+      <tr>
+        <td id="style1">{{word.spelling}}</td>
+        <td>{{word.title}}</td>
+      </tr>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="removeWord(word)">Usuń</button>
+      <button mat-raised-button color="primary" (click)="removeFromTeachWord(word)">Nienauczone</button>
+    </mat-card-actions>
+  </mat-card>
   </tbody>
 </table>

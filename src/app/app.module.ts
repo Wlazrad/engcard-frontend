@@ -35,6 +35,9 @@ import {MatTabsModule} from "@angular/material/tabs";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatListModule} from "@angular/material/list";
 import {MatIconModule} from "@angular/material/icon";
+import {MatCardModule} from "@angular/material/card";
+import {MatButtonModule} from "@angular/material/button";
+import {MatMenuModule} from "@angular/material/menu";
 
 
 @NgModule({
@@ -73,7 +76,10 @@ import {MatIconModule} from "@angular/material/icon";
     MatTabsModule,
     MatToolbarModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule,
+    MatButtonModule,
+    MatMenuModule
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]

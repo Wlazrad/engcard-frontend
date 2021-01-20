@@ -46,10 +46,11 @@
 
       <div class="row">
         <div class="col-sm-12">
-          <button (click)="addWord()" (click)="wordForm.reset()" type="submit" class="mat-button" color="primary">Zapisz
+          <button mat-raised-button color="primary" (click)="addWord()" (click)="wordForm.reset()" type="submit"
+                  class="mat-button" color="primary">Zapisz
             słowo
           </button>
-          <button (click)="wordForm.reset()" class="mat-button">Wyczyść</button>
+          <button mat-raised-button color="warn" (click)="wordForm.reset()" class="mat-button">Wyczyść</button>
         </div>
       </div>
 
