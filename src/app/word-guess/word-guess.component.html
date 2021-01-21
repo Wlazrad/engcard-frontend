@@ -2,20 +2,22 @@
 
 <mat-slide-toggle color="primary" [(ngModel)]="changeLanguage" (change)="changed()">Zmień język</mat-slide-toggle>
 
-<table class="cardWord" *ngFor="let word of words; let i = index">
+<table *ngFor="let word of words; let i = index">
   <tbody *ngIf="word.teach == false && changeLanguage == true">
+  <mat-card class="card card-small highlight-card">
+    <tr (click)="hidden()">
+      <td id="Font1">{{word.spelling}}</td>
+      <td id="Font1" [hidden]="isHidden">{{word.polishMeaning}}</td>
+    </tr>
+  </mat-card>
 
-  <tr (click)="hidden()">
-    <td id="Font1">{{word.spelling}}</td>
-    <td id="Font1" [hidden]="isHidden">{{word.polishMeaning}}</td>
-  </tr>
   </tbody>
   <tbody *ngIf="word.teach == false && changeLanguage == false">
-
-  <tr (click)="hidden()">
-    <td id="Font1">{{word.polishMeaning}}</td>
-    <td id="Font1" [hidden]="isHidden">{{word.spelling}}</td>
-  </tr>
+  <mat-card class="card card-small highlight-card">
+    <tr (click)="hidden()">
+      <td id="Font1">{{word.polishMeaning}}</td>
+      <td id="Font1" [hidden]="isHidden">{{word.spelling}}</td>
+    </tr>
+  </mat-card>
   </tbody>
 </table>
-

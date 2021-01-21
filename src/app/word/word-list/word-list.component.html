@@ -1,28 +1,30 @@
 
-<table class="cardWord" *ngFor="let word of words; let i = index">
+<table *ngFor="let word of words; let i = index">
   <tbody *ngIf="word.teach == false">
-  <tr>
+  <mat-card>
+    <tr>
       <td id="demoFont4">{{word.articulation}}</td>
-      <td><a id="firstPartWord">{{word.partOne.substring(0,cutWord(word).valueOf())}}</a>
+      <td><a id="firstPartWord">{{word.partOne.substring(0, cutWord(word).valueOf())}}</a>
         <a id="secondPartWord">{{word.partOne.substring(cutWord(word).valueOf())}}</a></td>
-      <td><a id="firstPartWord">{{word.partTwo.substring(0,cutSecondWord(word).valueOf())}}</a>
+      <td><a id="firstPartWord">{{word.partTwo.substring(0, cutSecondWord(word).valueOf())}}</a>
         <a id="secondPartWord">{{word.partTwo.substring(cutSecondWord(word).valueOf())}}</a>
       </td>
-  </tr>
-  <tr>
-    <td *ngIf="word.partOfSpeech == 'rzeczownik'" id="colorFont1">{{word.partOfSpeech}}</td>
-    <td *ngIf="word.partOfSpeech == 'czasownik'" id="colorFont3">{{word.partOfSpeech}}</td>
-    <td *ngIf="word.partOfSpeech == 'przymiotnik'" id="colorFont2">{{word.partOfSpeech}}</td>
-    <td id="demoFont3" class="blink">{{word.polishMeaning}}</td>
-    <td id="demoFont">{{word.createdDate | date}}</td>
-  </tr>
-  <tr>
-    <td id="demoFont">{{word.spelling}}</td>
-    <td id="demoFont2">{{word.title}}</td>
-    <td>
-      <button (click)="removeWord(word)">Usuń</button>
-      <button (click)="addToTeachWord(word)">Zapamiętane</button>
-    </td>
-  </tr>
+    </tr>
+    <tr>
+      <td *ngIf="word.partOfSpeech == 'rzeczownik'" id="colorFont1">{{word.partOfSpeech}}</td>
+      <td *ngIf="word.partOfSpeech == 'czasownik'" id="colorFont3">{{word.partOfSpeech}}</td>
+      <td *ngIf="word.partOfSpeech == 'przymiotnik'" id="colorFont2">{{word.partOfSpeech}}</td>
+      <td id="demoFont3" class="blink">{{word.polishMeaning}}</td>
+      <td id="demoFont">{{word.createdDate | date}}</td>
+    </tr>
+    <tr>
+      <td id="demoFont">{{word.spelling}}</td>
+      <td id="demoFont2">{{word.title}}</td>
+      <td>
+        <button mat-raised-button color="primary" (click)="removeWord(word)">Usuń</button>
+        <button mat-raised-button color="primary" (click)="addToTeachWord(word)">Zapamiętane</button>
+      </td>
+    </tr>
+  </mat-card>
   </tbody>
 </table>
