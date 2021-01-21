@@ -38,6 +38,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatCardModule} from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
 import {MatMenuModule} from "@angular/material/menu";
+import {CdkTableModule} from "@angular/cdk/table";
 
 
 @NgModule({
@@ -79,7 +80,8 @@ import {MatMenuModule} from "@angular/material/menu";
     MatIconModule,
     MatCardModule,
     MatButtonModule,
-    MatMenuModule
+    MatMenuModule,
+    CdkTableModule
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
