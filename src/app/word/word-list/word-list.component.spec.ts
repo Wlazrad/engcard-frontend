@@ -1,16 +1,16 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
 
-import { WordListComponent } from './word-list.component';
+import {WordListComponent} from './word-list.component';
 
 describe('WordListComponent', () => {
   let component: WordListComponent;
   let fixture: ComponentFixture<WordListComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ WordListComponent ]
+      declarations: [WordListComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
