@@ -7,7 +7,6 @@ import {StrictHttpResponse as __StrictHttpResponse} from '../strict-http-respons
 import {Observable as __Observable} from 'rxjs';
 import {filter as __filter, map as __map} from 'rxjs/operators';
 
-import {ModelAndView} from '../models/model-and-view';
 
 /**
  * Basic Error Controller
@@ -16,13 +15,13 @@ import {ModelAndView} from '../models/model-and-view';
   providedIn: 'root',
 })
 class BasicErrorControllerService extends __BaseService {
-  static readonly errorHtmlUsingGETPath = '/error';
-  static readonly errorHtmlUsingHEADPath = '/error';
-  static readonly errorHtmlUsingPOSTPath = '/error';
-  static readonly errorHtmlUsingPUTPath = '/error';
-  static readonly errorHtmlUsingDELETEPath = '/error';
-  static readonly errorHtmlUsingOPTIONSPath = '/error';
-  static readonly errorHtmlUsingPATCHPath = '/error';
+  static readonly errorUsingGETPath = '/error';
+  static readonly errorUsingHEADPath = '/error';
+  static readonly errorUsingPOSTPath = '/error';
+  static readonly errorUsingPUTPath = '/error';
+  static readonly errorUsingDELETEPath = '/error';
+  static readonly errorUsingOPTIONSPath = '/error';
+  static readonly errorUsingPATCHPath = '/error';
 
   constructor(
     config: __Configuration,
@@ -32,10 +31,10 @@ class BasicErrorControllerService extends __BaseService {
   }
 
   /**
-   * errorHtml
+   * error
    * @return OK
    */
-  errorHtmlUsingGETResponse(): __Observable<__StrictHttpResponse<ModelAndView>> {
+  errorUsingGETResponse(): __Observable<__StrictHttpResponse<{ [key: string]: {} }>> {
     let __params = this.newParams();
     let __headers = new HttpHeaders();
     let __body: any = null;
@@ -52,26 +51,26 @@ class BasicErrorControllerService extends __BaseService {
     return this.http.request<any>(req).pipe(
       __filter(_r => _r instanceof HttpResponse),
       __map((_r) => {
-        return _r as __StrictHttpResponse<ModelAndView>;
+        return _r as __StrictHttpResponse<{ [key: string]: {} }>;
       })
     );
   }
 
   /**
-   * errorHtml
+   * error
    * @return OK
    */
-  errorHtmlUsingGET(): __Observable<ModelAndView> {
-    return this.errorHtmlUsingGETResponse().pipe(
-      __map(_r => _r.body as ModelAndView)
+  errorUsingGET(): __Observable<{ [key: string]: {} }> {
+    return this.errorUsingGETResponse().pipe(
+      __map(_r => _r.body as { [key: string]: {} })
     );
   }
 
   /**
-   * errorHtml
+   * error
    * @return OK
    */
-  errorHtmlUsingHEADResponse(): __Observable<__StrictHttpResponse<ModelAndView>> {
+  errorUsingHEADResponse(): __Observable<__StrictHttpResponse<{ [key: string]: {} }>> {
     let __params = this.newParams();
     let __headers = new HttpHeaders();
     let __body: any = null;
@@ -88,26 +87,26 @@ class BasicErrorControllerService extends __BaseService {
     return this.http.request<any>(req).pipe(
       __filter(_r => _r instanceof HttpResponse),
       __map((_r) => {
-        return _r as __StrictHttpResponse<ModelAndView>;
+        return _r as __StrictHttpResponse<{ [key: string]: {} }>;
       })
     );
   }
 
   /**
-   * errorHtml
+   * error
    * @return OK
    */
-  errorHtmlUsingHEAD(): __Observable<ModelAndView> {
-    return this.errorHtmlUsingHEADResponse().pipe(
-      __map(_r => _r.body as ModelAndView)
+  errorUsingHEAD(): __Observable<{ [key: string]: {} }> {
+    return this.errorUsingHEADResponse().pipe(
+      __map(_r => _r.body as { [key: string]: {} })
     );
   }
 
   /**
-   * errorHtml
+   * error
    * @return OK
    */
-  errorHtmlUsingPOSTResponse(): __Observable<__StrictHttpResponse<ModelAndView>> {
+  errorUsingPOSTResponse(): __Observable<__StrictHttpResponse<{ [key: string]: {} }>> {
     let __params = this.newParams();
     let __headers = new HttpHeaders();
     let __body: any = null;
@@ -124,26 +123,26 @@ class BasicErrorControllerService extends __BaseService {
     return this.http.request<any>(req).pipe(
       __filter(_r => _r instanceof HttpResponse),
       __map((_r) => {
-        return _r as __StrictHttpResponse<ModelAndView>;
+        return _r as __StrictHttpResponse<{ [key: string]: {} }>;
       })
     );
   }
 
   /**
-   * errorHtml
+   * error
    * @return OK
    */
-  errorHtmlUsingPOST(): __Observable<ModelAndView> {
-    return this.errorHtmlUsingPOSTResponse().pipe(
-      __map(_r => _r.body as ModelAndView)
+  errorUsingPOST(): __Observable<{ [key: string]: {} }> {
+    return this.errorUsingPOSTResponse().pipe(
+      __map(_r => _r.body as { [key: string]: {} })
     );
   }
 
   /**
-   * errorHtml
+   * error
    * @return OK
    */
-  errorHtmlUsingPUTResponse(): __Observable<__StrictHttpResponse<ModelAndView>> {
+  errorUsingPUTResponse(): __Observable<__StrictHttpResponse<{ [key: string]: {} }>> {
     let __params = this.newParams();
     let __headers = new HttpHeaders();
     let __body: any = null;
@@ -160,26 +159,26 @@ class BasicErrorControllerService extends __BaseService {
     return this.http.request<any>(req).pipe(
       __filter(_r => _r instanceof HttpResponse),
       __map((_r) => {
-        return _r as __StrictHttpResponse<ModelAndView>;
+        return _r as __StrictHttpResponse<{ [key: string]: {} }>;
       })
     );
   }
 
   /**
-   * errorHtml
+   * error
    * @return OK
    */
-  errorHtmlUsingPUT(): __Observable<ModelAndView> {
-    return this.errorHtmlUsingPUTResponse().pipe(
-      __map(_r => _r.body as ModelAndView)
+  errorUsingPUT(): __Observable<{ [key: string]: {} }> {
+    return this.errorUsingPUTResponse().pipe(
+      __map(_r => _r.body as { [key: string]: {} })
     );
   }
 
   /**
-   * errorHtml
+   * error
    * @return OK
    */
-  errorHtmlUsingDELETEResponse(): __Observable<__StrictHttpResponse<ModelAndView>> {
+  errorUsingDELETEResponse(): __Observable<__StrictHttpResponse<{ [key: string]: {} }>> {
     let __params = this.newParams();
     let __headers = new HttpHeaders();
     let __body: any = null;
@@ -196,26 +195,26 @@ class BasicErrorControllerService extends __BaseService {
     return this.http.request<any>(req).pipe(
       __filter(_r => _r instanceof HttpResponse),
       __map((_r) => {
-        return _r as __StrictHttpResponse<ModelAndView>;
+        return _r as __StrictHttpResponse<{ [key: string]: {} }>;
       })
     );
   }
 
   /**
-   * errorHtml
+   * error
    * @return OK
    */
-  errorHtmlUsingDELETE(): __Observable<ModelAndView> {
-    return this.errorHtmlUsingDELETEResponse().pipe(
-      __map(_r => _r.body as ModelAndView)
+  errorUsingDELETE(): __Observable<{ [key: string]: {} }> {
+    return this.errorUsingDELETEResponse().pipe(
+      __map(_r => _r.body as { [key: string]: {} })
     );
   }
 
   /**
-   * errorHtml
+   * error
    * @return OK
    */
-  errorHtmlUsingOPTIONSResponse(): __Observable<__StrictHttpResponse<ModelAndView>> {
+  errorUsingOPTIONSResponse(): __Observable<__StrictHttpResponse<{ [key: string]: {} }>> {
     let __params = this.newParams();
     let __headers = new HttpHeaders();
     let __body: any = null;
@@ -232,26 +231,26 @@ class BasicErrorControllerService extends __BaseService {
     return this.http.request<any>(req).pipe(
       __filter(_r => _r instanceof HttpResponse),
       __map((_r) => {
-        return _r as __StrictHttpResponse<ModelAndView>;
+        return _r as __StrictHttpResponse<{ [key: string]: {} }>;
       })
     );
   }
 
   /**
-   * errorHtml
+   * error
    * @return OK
    */
-  errorHtmlUsingOPTIONS(): __Observable<ModelAndView> {
-    return this.errorHtmlUsingOPTIONSResponse().pipe(
-      __map(_r => _r.body as ModelAndView)
+  errorUsingOPTIONS(): __Observable<{ [key: string]: {} }> {
+    return this.errorUsingOPTIONSResponse().pipe(
+      __map(_r => _r.body as { [key: string]: {} })
     );
   }
 
   /**
-   * errorHtml
+   * error
    * @return OK
    */
-  errorHtmlUsingPATCHResponse(): __Observable<__StrictHttpResponse<ModelAndView>> {
+  errorUsingPATCHResponse(): __Observable<__StrictHttpResponse<{ [key: string]: {} }>> {
     let __params = this.newParams();
     let __headers = new HttpHeaders();
     let __body: any = null;
@@ -268,18 +267,18 @@ class BasicErrorControllerService extends __BaseService {
     return this.http.request<any>(req).pipe(
       __filter(_r => _r instanceof HttpResponse),
       __map((_r) => {
-        return _r as __StrictHttpResponse<ModelAndView>;
+        return _r as __StrictHttpResponse<{ [key: string]: {} }>;
       })
     );
   }
 
   /**
-   * errorHtml
+   * error
    * @return OK
    */
-  errorHtmlUsingPATCH(): __Observable<ModelAndView> {
-    return this.errorHtmlUsingPATCHResponse().pipe(
-      __map(_r => _r.body as ModelAndView)
+  errorUsingPATCH(): __Observable<{ [key: string]: {} }> {
+    return this.errorUsingPATCHResponse().pipe(
+      __map(_r => _r.body as { [key: string]: {} })
     );
   }
 }
