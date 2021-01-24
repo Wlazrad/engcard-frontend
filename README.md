@@ -28,6 +28,7 @@ export class AuthInterceptor implements HttpInterceptor {
 Run `ng serve --port 8081` for a dev server. Navigate to `http://localhost:8081/`.
 
 ng-swagger-gen -i http://localhost:8080/v2/api-docs
+ng-swagger-gen -i http://skojarz.pl:8080/v2/api-docs
 
 For Adnroid 1 - npm install -- save @capacitor/core @capacitor/cli 2 - open file angular.json and change from  "
 outputPath" : "dist/{{nameApp}}" to be

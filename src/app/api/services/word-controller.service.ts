@@ -236,7 +236,6 @@ class WordControllerService extends __BaseService {
       })
     );
   }
-
   /**
    * getAllNoTeachWord
    * @return OK
