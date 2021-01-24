@@ -9,7 +9,6 @@
       <td *ngIf="word.partOfSpeech == 'przymiotnik'" id="colorFont2">{{word.partOfSpeech}}</td>
     </tr>
     <tr>
-
       <td><a id="firstPartWord">{{word.partOne.substring(0, cutWord(word).valueOf())}}</a>
         <a id="secondPartWord">{{word.partOne.substring(cutWord(word).valueOf())}}</a></td>
       <td><a id="firstPartWord">{{word.partTwo.substring(0, cutSecondWord(word).valueOf())}}</a>
@@ -17,14 +16,12 @@
       </td>
     </tr>
     <tr>
-
       <td id="demoFont3" class="blink">{{word.polishMeaning}}</td>
       <td id="demoFont">{{word.createdDate | date}}</td>
     </tr>
     <tr>
       <td id="demoFont">{{word.spelling}}</td>
       <td id="demoFont2">{{word.title}}</td>
-
     </tr>
     <tr>
       <button mat-raised-button color="primary" (click)="removeWord(word)">Usuń</button>
